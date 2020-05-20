@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+	<meta name="description" content="contact form example">
+	
+	<link rel="shortcut icon" href="./assets/images/favicon.jpg" type="image/x-icon">
+
+	<title>NRA Portfolio</title>
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+	<!-- Bootswatch -->
+	<link rel="stylesheet" type="text/css" href="https://bootswatch.com/4/lux/bootstrap.min.css">
+
+	<!-- Custom css -->
+	<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+
+	<!-- Font Awesome -->
+	<script src="https://kit.fontawesome.com/6a16d64e90.js" crossorigin="anonymous"></script>
+
+	<!-- Sweet Alert 2 -->
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	
+
+
+</head>
+<body>
+
+	<!-- The Modal -->
+	  <div class="modal fade" id="myModal">
+	    <div class="modal-dialog">
+	      <div class="modal-content">
+	        <!-- Modal Header -->
+	        <div class="modal-header">
+	          <h4 class="modal-title"><i class="fas fa-smile-wink fa-2x mx-2"></i>MESSAGE ME!</h4>
+	          <button type="button" class="close" data-dismiss="modal">&times;</button>
+	        </div>
+	        
+	        <!-- Modal body -->
+	        <div class="modal-body">
+
+	        	<form id="gform" method="POST" action="https://script.google.com/macros/s/AKfycbxoo3iPHIvmzFYSH6CP9ItoMW5ZB34kNhhZUKM/exec" class="form-group" onsubmit="messageSent();">
+
+	        	        <label for="name">COMPANY NAME: </label>
+	        	        <input id="name" name="company" placeholder="(Optional)" class="form-control"/>
+	        	        <br>
+	        	        <label for="name">FULL NAME: </label>
+	        	        <input id="name" name="from" placeholder="(Optional)" class="form-control"/>
+	        	        <br>
+	        	        <label for="message">MESSAGE: </label>
+	        	        <textarea id="message" name="message" rows="10" required placeholder="Let me know what's on your mind..." 
+	        	        	class="form-control"></textarea>
+	        	        <br>
+	        	        <label for="email"><em>Your</em> EMAIL ADDRESS:</label>
+	        	        <input id="email" name="email" type="email" value=""
+	        	           required placeholder="your.name@email.com" class="form-control"/>
+	        	        <br>
+
+	        	        <script> 
+	        	              function messageSent () {
+
+	        	                Swal.fire({
+	        	                			icon: 'success',
+	        	                			title: 'Message sent',
+	        	                			text: "Thank you! I will reply to your message as soon as possible",
+	        	                			showConfirmButton: false,
+	        	                			timer: 5000
+	        	                			})	
+	        	              			}
+	        	            </script>
+	        	    </form>
+	        </div>
+	        
+	        <!-- Modal footer -->
+	        <div class="modal-footer">
+	       		<button class="btn btn-success" form="gform"><i class="fa fa-paper-plane"></i>&nbsp;Send</button>
+	          	<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+	        </div>     
+	      </div>
+	    </div>
+	  </div>
+
+	<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+		<a class="navbar-brand" href="#"><img src="./assets/images/logo.jpg" class="logo"> NRA</a>
+	
+	  	<a class="ml-auto pr-5" data-toggle="modal" data-target="#myModal"><i class="fas fa-comment-alt fa-2x mr-4"></i></a>
+	    	    
+	   	<a href="#home" class="ml-auto"><i class="fas fa-home fa-2x mr-4"></i></a>
+	</nav>
+
+	<div class="main">
+		<div class="section"  id="home">
+			<div class="intro text-center">
+				<h2 class="word animate__animated animate__bounceIn" style="animation-delay: 1s;">Hi!</h2>
+				<h1 class="word animate__animated animate__fadeInRight" style="animation-delay: 2s">I'M NOMER</h1>
+				<h4 class="word animate__animated animate__fadeInRight" style="animation-delay: 4s">A simple and creative web developer</h4>
+				<h6 class="word animate__animated animate__fadeInRight" style="animation-delay: 7s">KNOW MORE ABOUT ME AND MY WORK THROUGH THE COLOR DOTS</h6>
+			</div>
+			<div class="container text-center form-inline animate__animated animate__fadeInUp" style="animation-delay: 11s">
+				<div class="zoom1">
+					<div class="container">
+						<a href="#skills" class="text-dark">MY SKILLS</a>
+					</div>
+				</div>
+				<div class="zoom2">
+					<div class="container">
+						<a href="#about-me" class="text-light" onclick="checkPosition();">ABOUT ME</a>
+					</div>
+				</div>
+				<div class="zoom3">
+					<div class="container">
+						<a href="#projects" class="text-dark">MY WORK</a>
+					</div>
+				</div>
+			</div>
+		</div>		
+		<div class="section pb-4"  id="about-me">
+		
+			<div class="container col-sm-5 offset-sm-2 float-left">
+			<div class="about pb-3 animate__animated animate__fadeInDown" style="animation-delay: 1s">
+				<h2>ME & MY THOUGHTS</h2>			
+			</div>
+				<p class="animate__animated animate__fadeInLeft" style="animation-delay: 2s;">
+					Shifting career was never easy especially when you are financially challenged. However, if you found your passion and interest in your career, that is fulfilling! Because all the challenges and struggles you will face will be all worth it. At the end of the day, you will be happy and contented because you enjoy every part of what you do and you are more than happy to learn and achieve bigger goals.
+				</p>
+				<p class="animate__animated animate__fadeInLeft" style="animation-delay: 2s">
+					Hello, my name is NOMER ALCANTARA and I am a Full Stack Web Developer who believes that USER EXPERIENCE is the most important aspect of a website but combining it with CREATIVITY is awesome! As a developer, I am specializing in web user experience/interface while honing my skills in coding languages using different frameworks and libraries. You can check the websites that I have worked on from <a href="#projects" style="font-weight: bold; font-style: italic;">MY PROJECTS</a> and you can message me via the icon from the top bar. Otherwise, you can connect with me via email or <a href="#social" style="font-weight: bold; font-style: italic;">SOCIAL MEDIA</a> links at the bottom section.
+				</p>
+				<a href="./assets/images/nralcantara_cv.pdf" target="_blank">
+					<button class="btn btn-outline-dark text-uppercase animate__animated animate__flipInX" style="animation-delay: 3s;">
+						<i class="fas fa-cloud-download-alt mr-2"></i>Download CV
+					</button>
+				</a>	
+			</div>
+			<div class="container">
+				<img src="./assets/images/about_img.jpg" class="about_img animate__animated animate__fadeInRight">
+			</div>
+
+		</div>		
+		<div class="section"  id="projects">
+			<div class="container text-center mt-5 pt-5">
+				<h1 class="text-light">MY PROJECTS</h1>
+				<h6 class="pb-3 text-light">Click on the images to learn more about the website</h6>
+			</div>
+			<div class="row">
+			<div class="container text-white offset-sm-1">
+				<div class="capstone text-center mx-4">
+					<div class="title">
+						<h4 class="text-light">FlyN8</h4>
+					</div>
+					<div class="image1">
+						<div class="description">
+							<p>
+								FLYN8 is a static website which was created with HTML and Bootstap. Bootstrap is a CSS Framework for developing responsive and mobile-first websites.
+							</p>
+							<p>
+								This website was created to demonstrate a simple product promotion for a travel and tours agency. 
+							</p>
+						</div>
+					</div>
+				 	<a href="https://flyn8.netlify.app/" target="_blank">
+				 		<button class="btn btn-outline-light mt-3 mb-5">VIEW THIS WEBSITE</button>	
+				 	</a>		
+				</div>
+				<div class="capstone text-center mx-4">
+					<div class="title">
+						<h4 class="text-light">FRAME</h4>
+					</div>
+					<div class="image2">
+						<div class="description">
+							<p>
+								FRAME is a dynamic website which was created with LARAVEL Framework. A PHP web framework created by Taylor Ottwell and intended for development of web applications following the Model-View-Controller (MVC) architectural pattern.
+							</p>
+							<p>
+								This website was created to demonstrate an Asset Management System of a rental store using the operations of Create, Read, Update and Delete (CRUD) wherein the admin user is able to add, display, edit and delete products from and to MySQL Database.
+							</p>		
+						</div>
+					</div>
+				 	<a href="http://frames-cameras.herokuapp.com/" target="_blank">
+				 		<button class="btn btn-outline-light mt-3 mb-5">VIEW THIS WEBSITE</button>
+				 	</a>		
+				</div>
+				<div class="capstone text-center mx-4">
+						<div class="title">
+							<h4 class="text-light">RoadTrip</h4>
+						</div>
+						<div class="image3">
+							<div class="description">
+								<p>
+									ROADTRIP is a full-stack website which was created with a Client-Server Model.  This is a distributed application structure that partitions tasks between provider (server) and service requester (clients). A basic example of a microservices web architecture.
+								</p>
+								<p>
+									This website was created to demonstrate a bus transport Booking System using MongoDB, Express, React and Node applications.
+								</p>		
+							</div>
+						</div>	
+				 		<a href="https://roadtrip-bus.netlify.app/" target="_blank">
+				 			<button class="btn btn-outline-light mt-3 mb-5">VIEW THIS WEBSITE</button>
+				 		</a>						
+					</div>
+				</div>
+			</div>
+		</div>	
+
+		<div class="section"  id="skills">
+		<div class="container col-sm-10 offset-sm-5">
+			<div class="header">
+				<h1 class="text-light py-4">MY SKILLS</h1>
+			</div>
+			<div class="card col-sm-3">
+				<div class="title"><h3 class="text-light">WHAT I KNOW</h3></div>
+				<div class="body">
+					<h6 class="text-light"><strong class="strong">CODING LANGUANGES.</strong></strong> HTML5, CSS3, JAVASCRIPT, PHP, SQL AND GRAPHQL.</h6>
+					<h6 class="text-light"><strong class="strong">FRAMEWORKS AND LIBRARIES.</strong> BOOTSTRAP, JQUERY, REACTJS, NODEJS, EXPRESS, LARAVEL AND REST.</h6>
+					<h6 class="text-light"><strong class="strong">DATABASES.</strong> MYSQL AND MONGODB.</h6>
+				</div>	
+			</div>
+			<div class="card col-sm-3 offset-sm-1">
+				<div class="title"><h3 class="text-light">WHAT I CAN DO</h3></div>
+				<div class="body">
+					<h6 class="text-light"><strong class="strong">FRONT END DEVELOPER.</strong></strong> Creating website layout and design using HTML, CSS and JAVASCRIPT.</h6>
+					<h6 class="text-light"><strong class="strong">BACK END DEVELOPER.</strong> Enabling the communication between web server, application and database.</h6>
+					<h6 class="text-light"><strong class="strong">FULL STACK DEVELOPER.</strong> Performing both Front End and Back End Roles.</h6>
+				</div>	
+			</div>
+		</div>
+		</div>		
+		<div class="footer text-center" id="social">
+			<div class="container">
+				<h4 class="pt-4 text-light">LET US CONNECT</h4>
+			</div>
+			<div class="form-inline justify-content-center">		
+				<a href="https://www.facebook.com/nomer.alcantara.7" class="mx-2 text-light" target="_blank">
+					<i class="fab fa-facebook fa-2x"></i>
+				</a>
+				<a href="https://www.linkedin.com/in/nomer-alcantara-56864321/" class="mx-2 text-light" target="_blank">
+					<i class="fab fa-linkedin fa-2x"></i>
+				</a>
+				<a href="https://gitlab.com/nralcantara" class="mx-2 text-light" target="_blank">
+					<i class="fab fa-gitlab fa-2x"></i>
+				</a>
+				<a href="https://github.com/nralcantara" class="mx-2 text-light" target="_blank">
+					<i class="fab fa-github fa-2x"></i>
+				</a>
+			</div>
+			<div class="container mt-4 text-light">
+				<a href="mailto:nralcantara.eco@gmail.com" target="_blank"><i class="fas fa-envelope fa-2x"></i></a>
+				<p>nralcantara.eco@gmail.com</p>
+			</div>
+			<div class="container footer mt-4">
+				<h6 class="text-light">Copyright&copy;2020 All rights reserved | Created by nralcantara</h6>
+			</div>
+		</div>
+	</div>			
+	
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</body>
+</html>
